@@ -1,0 +1,557 @@
+@font-face {
+    font-family: 'DINOT';
+    font-style: normal;
+    font-weight: 400;
+    src: local('DINOT'),
+    url(fonts/dinot.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'DINOT';
+    font-style: normal;
+    font-weight: 100;
+    src: local('DINOT Light'),
+    url(fonts/dinot-light.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'DINOT';
+    font-style: normal;
+    font-weight: 700;
+    src: local('DINOT Bold'),
+    local('DINOT Bold'),
+    url(fonts/dinot-bold.woff) format('woff');
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);  /*make transparent link selection, adjust last value opacity 0 to 1.0*/
+    font-family: 'DINOT', Arial, sans-serif;
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    width:100%;
+    height:100%;
+    margin:0px;
+    padding:0px;
+}
+
+.pac-container
+{
+    width:308px !important;
+    margin-left: -2px;
+    height:160px !important;
+}
+
+.pac-icon
+{
+    width:0px !important;
+}
+
+/**************************************************************** PAGE *********************************************/
+.page {
+    position:absolute;height:100%;width:100%;text-align: center;
+    zoom:100%;
+}
+
+.start-page-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    left: 0px;
+}
+.start-page-header-bg {
+    position: absolute;
+    width: 1080px;
+    height: 822px;
+    bottom: 1080px;
+    left:50%;
+    margin-left: -540px;
+}
+.start-page-zoom {
+    zoom:100%;
+}
+
+@media screen and (min-width:300px) {
+    .start-page-zoom {
+        zoom:29%;
+    }
+}
+@media screen and (min-width:700px) {
+    .start-page-zoom {
+        zoom:56%;
+    }
+}
+@media screen and (min-width:1000px) {
+    .start-page-zoom {
+        zoom:80%;
+    }
+}
+
+
+/**************************************************************** BUTTON *********************************************/
+.button {
+    position:absolute;
+    cursor: pointer;
+}
+
+#logo-holder {
+    background-image: url(../img/start-page-header-logo2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.start-page-menu {
+    background-color: #30b457;
+    cursor: pointer;
+}
+.start-page-menu:hover {
+    background-color: #30b457;
+}
+.start-page-menu:active {
+    background-color: #59a04f;
+}
+
+.start-page-menu-nearme {
+    background-image: url(../img/start-page-nearme-button.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.start-page-menu-plantrip {
+    background-image: url(../img/start-page-plantrip-button.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-left: 1px solid #FFF;
+    background-size: 100% 100%;
+}
+.start-page-menu-about {
+    background-image: url(../img/start-page-about-button.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-top: 1px solid #FFF;
+    background-size: 100% 100%;
+}
+.start-page-menu-settings {
+    background-image: url(../img/start-page-settings-button.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-left: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+    background-size: 100% 100%;
+}
+
+.main-page-menupanel-button {
+    position: relative;
+    width:100%; height:50px; background-color:#30b457;
+    background-position: left top;
+    background-repeat: no-repeat;
+}
+.main-page-menupanel-button:hover {
+    background-color:#59a04f;
+}
+.main-page-menupanel-logo {
+    background-image: url(../img/main-page-menupanel-logo.png);
+    height: 224px;
+    margin-bottom: 35px;
+}
+.main-page-menupanel-mapview {
+    background-image: url(../img/main-page-menupanel-mapview.png);
+    height: 170px;
+    margin-bottom: 6px;
+}
+.main-page-menupanel-aerialview {
+    background-image: url(../img/main-page-menupanel-aerialview.png);
+    height: 170px;
+    margin-bottom: 6px;
+}
+.main-page-menupanel-traffic {
+    background-image: url(../img/main-page-menupanel-traffic.png);
+    height: 170px;
+    margin-bottom: 35px;
+}
+.main-page-menupanel-traffic-select {
+    background-color: #428bca !important;
+}
+.main-page-menupanel-tripplanner {
+    background-image: url(../img/main-page-menupanel-tripplanner.png);
+    height: 195px;
+    margin-bottom: 6px;
+}
+.main-page-menupanel-share {
+    background-image: url(../img/main-page-menupanel-share.png);
+    height: 173px;
+    margin-bottom: 35px;
+}
+.main-page-menupanel-settings {
+    background-image: url(../img/main-page-menupanel-settings.png);
+    height: 181px;
+    margin-bottom: 6px;
+}
+.main-page-menupanel-about {
+    background-image: url(../img/main-page-menupanel-about.png);
+    height: 176px;
+    margin-bottom: 35px;
+}
+
+.main-page-toolbar-menu {
+    background-image: url(../img/main-page-toolbar-menu.png);
+    background-size: 83px 40px;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 100px;
+}
+.main-page-toolbar-locateme {
+    background-image: url(../img/main-page-toolbar-locateme.png);
+    background-size: 113px 40px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 130px;
+    right:0px;
+}
+
+.main-page-bottom-toolbar-select {
+    position: absolute;
+    background-color: #f1f2f2;
+    background-size: 57px 36px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 88px;
+    height: 50px;
+    cursor: pointer;
+}
+.main-page-bottom-toolbar-select:hover {
+    background-color: #f1f2f2;
+}
+
+.main-page-bottom-toolbar {
+    position: absolute;
+    background-color: #FFF;
+    background-size: 57px 36px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 88px;
+    height: 50px;
+    cursor: pointer;
+}
+.main-page-bottom-toolbar:hover {
+    background-color: #f1f2f2;
+}
+.main-page-toolbar-lng {
+    background-image: url(../img/main-page-toolbar-lng.png);
+    left: 50%;
+    margin-left: -130px;
+}
+.main-page-toolbar-cng {
+    background-image: url(../img/main-page-toolbar-cng.png);
+    left: 50%;
+    margin-left: -40px;
+}
+.main-page-toolbar-both {
+     background-image: url(../img/main-page-toolbar-both.png);
+     left: 50%;
+     margin-left: 0px;
+ }
+.main-page-toolbar-dots {
+    background-image: url(../img/main-page-toolbar-dots.png);
+    left: 50%;
+    margin-left: 50px;
+}
+
+#lngBtn img, #cngBtn img {
+    position: relative;
+    width:47px;
+    height: 30px;
+    top: -22px;
+    left: 21px;
+}
+
+.main-page-changeinfo-bottom-arrow {
+    background-color: #FFF;
+    background-image: url(../img/main-page-moreinfo-bottom-arrow.png);
+    background-size: 80px 57px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 57px;
+}
+.main-page-changeinfo-bottom-arrow:hover {
+    background-color: #CCC;
+}
+
+.main-page-changeinfo-top-arrow {
+    background-image: url(../img/main-page-moreinfo-top-arrow.png);
+    background-size: 80px 57px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 57px;
+}
+.main-page-changeinfo-top-arrow:hover {
+    background-color: #CCC;
+}
+
+/**************************************************************** PANEL *********************************************/
+.main-page-menu-popup-panel {
+    position: absolute; width: 100%; height: 100%; background-color: rgba(255,255,255,.5);
+}
+
+.main-page-menu-panel {
+    position: absolute; top: 0px; bottom: 0px; background-color: #18a147; width: 880px; height: 100%;
+}
+
+.menu-zoom {
+    zoom:90%;
+}
+@media screen and (min-width:300px) {
+    .menu-zoom {
+        zoom: 29%;
+    }
+}
+@media screen and (min-width:450px) {
+    .menu-zoom {
+        zoom: 45%;
+    }
+}
+@media screen and (min-width:1000px) {
+    .menu-zoom {
+        zoom: 52%;
+    }
+}
+
+
+
+.main-page-changeinfo-panel {
+    position:absolute;
+    width:100%;top:0px;bottom:36px;
+}
+
+
+.info-zoom {
+    zoom:100%;
+}
+.info-popup-zoom {
+    zoom:100%;
+}
+.filter-img-zoom {
+    zoom:100%;
+}
+.filter-lbl-zoom {
+    zoom:70%;
+}
+#stationAddress {
+    font-size: 70%;
+}
+@media screen and (min-width:500px) and (-webkit-min-device-pixel-ratio: 2.0) {
+    .info-zoom {
+        zoom: 200%;
+    }
+    .info-popup-zoom {
+        zoom: 180%;
+    }
+    .filter-img-zoom {
+        zoom:160%;
+    }
+    .filter-lbl-zoom {
+        zoom:100%;
+    }
+    .main-page-changeinfo-panel {
+        bottom:72px;
+    }
+}
+@media screen and (min-width:700px) and (min-height:1000px) {
+    .info-zoom {
+        zoom: 200%;
+    }
+    .info-popup-zoom {
+        zoom: 200%;
+    }
+    .filter-img-zoom {
+        zoom:160%;
+    }
+    .filter-lbl-zoom {
+        zoom:100%;
+    }
+    #stationAddress {
+        font-size: 300%;
+    }
+    #stationAddress {
+        font-size: 70%;
+    }
+    .main-page-changeinfo-panel {
+        bottom:72px;
+    }
+}
+
+
+
+/*************************************** SEARCH FIELD *****************************************/
+.x-field-search .x-field-input:before {
+    content:'' !important;
+}
+
+.x-input-search {
+    background-color: rgba(255,255,255,0);
+    margin-left: 5px !important;
+    color: #000; font-weight: bold;
+}
+
+input::-webkit-input-placeholder {
+    background-color: rgba(255,255,255,0);
+    color: #30b457; font-weight: normal !important;
+}
+
+.placeholder{
+    background-color: rgba(255,255,255,0);
+    color: #30b457; font-weight: normal !important;
+}
+
+.searchfield-stations {
+    background-color: rgba(255,255,255,0);
+    background-image: url(../img/main-page-toolbar-search-text.png);
+    background-size: 289px 52px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    width: 270px;
+    height: 52px;
+}
+
+.search-filter-button {
+
+}
+
+
+
+.SFB-logo1, .SFB-logo1:hover {
+    background:none;border: none;
+    border-radius:0 !important;
+    width:200px;height:200px;
+    background-color: rgba(0,0,0,0);
+    background-image:url("../img/main-page-toolbar-both.png");
+    background-position: -100px -100px;
+}
+
+.SFB-logo1:hover {
+    background-color: rgba(255,0,0,.3);
+}
+
+
+.SFB-logo2,.SFB-logo2:hover {
+    background:none;border: hidden;
+    border-radius:0 !important;
+    width:200px;height:200px;
+    background-image:url("../img/main-page-toolbar-cng.png");
+    background-position: -100px -100px;
+}
+
+.SFB-logo2:hover {
+    background-color: rgba(255,0,0,.6);
+}
+
+#info-close {
+    position:absolute;width:40px;top:0px;right:0px;z-index: 99999;
+}
+
+.info-popup-header {
+    position:absolute;width:338px;top:20px;height:30%;left:50%;margin-left: -164px;
+    background-image: url(../img/popup-station-info-short.png);
+    background-repeat: no-repeat;
+    background-size: 338px 154px;
+}
+.info-popup-details {
+    position:absolute;width:338px;top:35%;height: 30%;left:50%;margin-left: -164px;padding: 10px;
+    border-top: 1px solid #95979b;
+}
+.info-popup-fuel-types {
+    position:absolute;width:338px;top:60%;height: 20%;left:50%;margin-left: -164px;
+    border-top: 1px solid #95979b;padding: 10px;color: #67686a;
+}
+.info-popup-vehicle-types {
+    position:absolute;width:338px;top:80%;height: 20%;left:50%;margin-left: -164px;
+    padding: 10px;color: #67686a;
+}
+
+/************************************** TRIP PLANER ***************************************/
+#tp-title {
+    width: 100%;text-align: center;font-size: 18px;padding-top: 3px;font-weight: normal;padding-bottom: 15px;
+}
+#tp-close {
+    position:absolute;width:40px;top:0px;right:0px;
+}
+
+.tp-input-point {
+    padding-left: 10px; border: none;height: 35px;width:255px;
+}
+.holder-trip-point {
+    position: relative;
+    border-bottom: 1px solid #666;width:320px;left:50%;margin-left: -160px;
+}
+.holder-trip-point-delete {
+    position: absolute;top: -26px;right: 34px;
+}
+.holder-trip-point-change {
+    position: absolute;top: -14px;right: -3px;
+}
+
+.trip-planer-btn{
+    position: relative;left: 50%;margin-left: -140px;
+    font-size: 14px;margin-bottom:5px;padding: 15px 0px 15px 20px;width:300px;cursor: pointer;
+}
+.trip-planer-btn img {
+    float: left; padding-right:20px;
+    pointer-events:none;
+}
+
+#goDirect {
+    position: absolute;top:12px;left:185px;
+    width:138px;height:45px;cursor: pointer;
+    color: #004aa9;font-size: 14px;padding-left: 37px;padding-top: 13px;
+}
+#goPlanner {
+    position: absolute;top:58px;left:185px;
+    width:138px;height:45px;cursor: pointer;
+    color: #004aa9;font-size: 14px;padding-left: 37px;padding-top: 13px;
+}
+#goShare {
+    position: absolute;top:105px;left:185px;
+    width:138px;height:45px;cursor: pointer;
+    color: #004aa9;font-size: 14px;padding-left: 37px;padding-top: 13px;
+}
+
+
+#share-facebook {
+    position: absolute;width: 85px;height: 24px;top:9px;left:30px;cursor: pointer;
+}
+#share-twitter {
+    position: absolute;width: 85px;height: 24px;top:41px;left:30px;cursor: pointer;
+}
+#share-google {
+    position: absolute;width: 85px;height: 24px;top:73px;left:30px;cursor: pointer;
+}
+#share-mail {
+    position: absolute;width: 85px;height: 24px;top:105px;left:30px;cursor: pointer;
+}
+
+.about-submenu {
+    background-color:#f8f8f8;
+    color:#5d5c4a;font-size: 22px;
+    padding:12px 10px 12px 20px;
+    border-top: 1px solid #c1c0c0;
+}
+.about-submenu-open {
+    background-image: url(../img/about-submenu-bg-open.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 54px 13px;
+}
+.about-submenu-close {
+    background-image: url(../img/about-submenu-bg-close.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 43px 35px;
+}
